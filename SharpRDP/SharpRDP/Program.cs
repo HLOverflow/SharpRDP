@@ -6,7 +6,7 @@ using System.IO;
 
 namespace SharpRDP
 {
-    class Program
+    public class Program
     {
         static void HowTo()
         {
@@ -29,7 +29,7 @@ namespace SharpRDP
             Console.WriteLine("  Execute command elevated through task manager");
             Console.WriteLine("    SharpRDP.exe computername=domain.target command=\"C:\\Temp\\file.exe\" username=domain\\user password=password elevated=taskmgr");
         }
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             AppDomain.CurrentDomain.AssemblyResolve += (sender, argtwo) => {
                 Assembly thisAssembly = Assembly.GetEntryAssembly();
